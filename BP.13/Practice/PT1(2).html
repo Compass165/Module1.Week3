@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PT1(2)</title>
+</head>
+<body>
+<script>
+    const numbers = window.prompt();
+    const strength = numbers.toString();
+    const result = [strength[0]];
+
+    for(let x = 1; x<strength.length; x++ ) {
+        if ((strength[x-1] % 2 === 0) && (strength[x] % 2 === 0)) {
+            result.push('-', strength[x]);
+        }
+        else {
+            result.push(strength[x]);
+        }
+            }
+    console.log(result.join(''));
+</script>
+</body>
+</html>
