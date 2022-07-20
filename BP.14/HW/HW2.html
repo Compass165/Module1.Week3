@@ -5,6 +5,30 @@
     <title>Title</title>
 </head>
 <body>
-
+<h2>FEET <-> METERS</h2>
+<label>
+    <p>
+        Foot size <input type="number1" id="footSize" placeholder="Put size in here"
+        oninput="trans1(this.value)"
+        onchange="trans1(this.value)">
+    </p>
+    <p>To Meters: <span id="result1"></span></p>
+    <p>
+        Foot size <input type="number2" id="meters" placeholder="Put Meters in here"
+                         oninput="trans2(this.value)"
+                         onchange="trans2(this.value)">
+    </p>
+    <p>To Foot size: <span id="result2"></span></p>
+</label>
 </body>
+<script>
+    function trans1(Numbers1) {
+        Numbers1 = parseInt(Numbers1);
+        document.getElementById("result1").innerHTML = (Numbers1 * 0.305).toFixed(3)
+    }
+    function trans2(Numbers2) {
+        Numbers2 = parseInt(Numbers2);
+        document.getElementById(("result2")).innerHTML = (Numbers2 * 3.279.toFixed(3))
+    }
+</script>
 </html>

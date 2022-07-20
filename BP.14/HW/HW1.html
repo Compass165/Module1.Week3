@@ -6,6 +6,39 @@
 </head>
 <body>
 <h2>Check Prime: Số nguyên tố</h2>
+<p><label>
+    Number: <input type="number" id="ADD" oninput="checkprime(this.value)"
+    onchange="isprime(this.value)">
+</label>
+    is : <span id="OUT"></span>
+</p>
+<script>
+    function checkprime(number) {
+        if (number < 2) {
+            return false;
+        }
+        for (let i = 2; i < Math.sqrt(number); i++) {
+            if (number % i === 0) {
+                return false;
+            } else { return true
+            }
+        }
+    }
+
+       function isprime() {
+           let number = +(document.getElementById("ADD").value);
+           let result = "";
+           if (checkPrime(number)) {
+               result = " prime"
+           } else {
+               result = " not prime"
+           }
+           if (number == '') {
+               result = " ";
+           }
+           document.getElementById("OUT").innerHTML = result;
+       }
+</script>
 <!--<p>-->
 <!--    <label> Number: <input type="number" id="input" oninput="checkPrime(this.value)"-->
 <!--onchange="isPrime(this.value)"></label>-->
