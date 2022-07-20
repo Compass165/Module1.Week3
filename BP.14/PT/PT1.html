@@ -1,10 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Tạo và gọi hàm</title>
 </head>
 <body>
-$END$
+<script>
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "Toẹt zời. Các ta sẽ chơi một gem cờ hay";
+        }
+        else {
+            result = "Các ta chơi sau vạiii";
+        }
+        return result;
+    }
+    let confirmAnswer = confirm("Làm 1 gem nafoooo?");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+</script>
 </body>
 </html>

@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi nhiệt độ</title>
 </head>
 <body>
-$END$
+<h2><b>VÀ SAU ĐÂY LÀ CHƯƠNG TRÌNH CHUYỂN ĐỔI NHIỆT ĐỘ</b></h2>
+<p>Hãy nhập độ F bạn muốn chuyển vào đây để dẩy ló sang C lào bạn êi</p>
+<p><label>Fahreheit: </label>
+    <input type="number" id="inputFahrenheit" placeholder="Nhập độ F vào đây"
+    oninput="temperatureConverter(this.value)"
+    onchange="temperatureCoverter(this.value)">
+</p>
+<p>
+    Celsius: <span id="outputCelsius"></span>
+</p>
 </body>
+<script>
+    function temperatureConverter(valNum) {
+        valNum = parseFloat(valNum);
+        document.getElementById("outputCelsius").innerHTML = (valNum-32)/1.8;
+    }
+</script>
 </html>
