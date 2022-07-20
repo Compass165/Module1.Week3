@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hello</title>
+</head>
+<body>
+<span id="alert">hehe boiz</span>
+</body>
+<script>
+    function alertMessage (messageNotificcation) {
+        let result = '';
+        if (messageNotificcation) {
+            result = "Can I help you?"
+        }
+        else { result = "Maybe later!"
+        }
+        return result
+    }
+    let confirmNotification = confirm("Hello!");
+    let theAnswer =alertMessage(confirmNotification);
+    alert(theAnswer)
+</script>
+</html>

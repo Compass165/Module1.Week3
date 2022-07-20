@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Compare</title>
+</head>
+<body>
+<script>
+    function compare(firstNum, secondNum) {
+        let sum = 0
+        if (firstNum > secondNum) {
+            alert('Số thứ nhất lớn hơn số thứ hai')
+        }
+        else {sum = firstNum + secondNum}
+        return sum
+    }
+
+        let firstNum = +prompt("Nhap so thu nhat:");
+        let secondNum = +prompt("Nhap so thu hai:");
+        let checkNum = compare(firstNum, secondNum);
+        alert(checkNum);
+</script>
+</body>
+</html>
